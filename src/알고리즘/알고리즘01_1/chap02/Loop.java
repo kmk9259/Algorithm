@@ -41,8 +41,8 @@ public class Loop {
 		int num=sc.nextInt();
 		int result=0;
 		if(num%2==0) //짝수로 끝나면 가우스 덧셈
-			result = (1+num) *((1+num)/2);
-		else //홀수로 끝나면 가우스-중간값
+			result = (1+num) *((1+num)/2);  
+		else //홀수로 끝나면 가우스-중간값			
 			result = (1+num) *((1+num)/2) - (1+num)/2;
 		System.out.println(result);
 	}
@@ -57,14 +57,14 @@ public class Loop {
 			for(int i=b; i<=a; i++)
 				sum +=i;
 		System.out.println(sum);
-			
-		
+	
 	}
 	public static void q10()
 	{
 		System.out.println("a의 값 : ");
 		int a= sc.nextInt();
-		while(true) {
+		while(true) 
+		{
 			System.out.println("b의 값 : ");
 			int b=sc.nextInt();
 			if(a>=b)
@@ -74,7 +74,6 @@ public class Loop {
 				System.out.println("b-a는 "+(b-a)+"입니다.");
 				break;
 			}
-			
 		}
 		
 	}
@@ -92,7 +91,6 @@ public class Loop {
 				count++;
 			}
 			System.out.println("그 수는 "+count+"자리입니다.");
-
 		}
 
 		
@@ -129,7 +127,7 @@ public class Loop {
 	}
 	public static void q14()
 	{
-		System.out.println("사각형을 출력합니다.");
+		System.out.println("사각형을 출력");
 		System.out.println("단 수 : ");
 		int num = sc.nextInt();
 		
@@ -149,12 +147,11 @@ public class Loop {
 				System.out.print("*");
 			System.out.println(); 					
 		}
-		
 	}
 	public static void q15_2(int n)
 	{
-		for (int i = n; i >= 0; i--) { 				
-			for (int j = i; j >=0; j--) 			
+		for (int i = n; i > 0; i--) { 				
+			for (int j = i; j >0; j--) 			
 				System.out.print("*");
 			System.out.println(); 					
 		}
@@ -166,6 +163,7 @@ public class Loop {
 		{ 				
 			for (int j = 0; j < i ; j++) 		
 				System.out.print(" ");
+			
 			for (int j = 0; j < n - i ; j++) 	
 				System.out.print("*");
 			System.out.println();					
@@ -176,8 +174,9 @@ public class Loop {
 	{
 		for (int i = 0; i < n; i++) 
 		{ 				
-			for (int j = 0; j < n - i ; j++) 	
+			for (int j = 1; j < n - i ; j++) 	
 				System.out.print(" ");
+			
 			for (int j = 0; j <= i ; j++) 		
 				System.out.print("*");
 			
@@ -188,8 +187,9 @@ public class Loop {
 	public static void q16(int n)
 	{
 		for (int i = 1; i <= n; i++) { 					
-			for (int j = 1; j <= n - i + 1; j++) 		
+			for (int j = 1; j <= n - i ; j++) 		
 				System.out.print(" ");
+			
 			for (int j = 1; j <= (i - 1) * 2 + 1; j++) 
 				System.out.print("*");
 			System.out.println(); 						
@@ -198,13 +198,14 @@ public class Loop {
 	public static void q17(int n)
 	{
 		for (int i = 1; i <= n; i++) { 					
-			for (int j = 1; j <= n - i + 1; j++) 		
+			for (int j = 1; j <= n - i ; j++) 		
 				System.out.print(" ");
 			for (int j = 1; j <= (i - 1) * 2 + 1; j++) 
 				System.out.print(i);
 			System.out.println(); 						
 		}
 	}
+
 	public static void main(String[] args) 
 	{
 //		q6();
@@ -212,10 +213,10 @@ public class Loop {
 		//q8();
 //		q9(3, 5);
 //		q9(5, 1);
-//		q11();
-		//q15(6);
+		//q15_4(5);
+		q16(6);
 		//q15_4(6);
-		q17(6);
+		//q17(6);
 	
 	}
 
